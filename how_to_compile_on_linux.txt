@@ -1,0 +1,22 @@
+# myquadmath for linux
+
+# This is NOT a script file, simply directions for Terminal
+
+
+# Directions:
+
+# Find directory of "quadmath.h"
+# Use it in CPATH below
+# In Terminal on macOS copy and paste:
+
+
+export CPATH=/usr/lib/gcc/x86_64-linux-gnu/7.3.0/include
+gcc -c -Wall -Werror -fpic myquadmath_dll.c
+gcc -shared -o libmyquadmath.so myquadmath_dll.o -lquadmath
+gcc -L. -Wall -o myquadmath_test myquadmath_test.c -lmyquadmath
+export LD_LIBRARY_PATH=$PWD:$LD_LIBRARY_PATH
+./myquadmath_test
+
+
+# Done!
+# Should run "myquadmath_test"

@@ -1,0 +1,38 @@
+
+How to compile "myquadmath" on Windows.
+
+1. Download "GCC" with "quadmath.h"
+You can get it as part of Strawberry Perl:
+http://strawberryperl.com/
+
+Example:
+http://strawberryperl.com/download/5.30.0.1/strawberry-perl-5.30.0.1-64bit-portable.zip
+
+2. Edit "setenv_gcc64.bat" and "setenv_gcc32.bat" as needed to update
+"CPATH" and "PATH" to the include directory of "quadmath.h" and the path of
+"gcc" respectively.  Windows uses ';' semicolon, Unix clones, such as Linux, 
+FreeBSD, macOS, or Cygwin on Windows, use a colon ':' for separating 
+directories in system environment variables.
+
+3. Double-click on compile64.bat or compile32.bat, respectively, based on which
+tool-chain you are going to use, 64-bit gcc or 32-bit gcc.
+
+4. Press Enter when prompted.
+
+5. To install, put the generated *.dll file into a directory included by the
+"PATH" variable. Or,
+Have all the DLLs you need in the PATH variable or in your working directory.
+
+6. Finally, use the DLL functions in your program. There are a few examples 
+that came with this software.
+
+7. Lookup functions in GCC's documentation of "quadmath.h"
+
+Example:
+https://gcc.gnu.org/onlinedocs/gcc-9.1.0/libquadmath/
+
+8. Test out the functions, so that you know how to use them, before making 
+production software.
+
+9. Compile your program using any software language that can use Dynamic-Link 
+Libraries (DLLs).

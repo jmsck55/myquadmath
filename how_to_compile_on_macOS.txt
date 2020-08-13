@@ -1,0 +1,33 @@
+# myquadmath for macOS (10.14.5)
+
+# This is NOT a script file, simply directions for Terminal
+
+
+# Directions:
+
+# Install GCC from homebrew (https://brew.sh/)
+# In Terminal on macOS copy and paste:
+
+
+xcode-select --install
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+
+brew install gcc
+
+
+# Find directory of "quadmath.h"
+# Use it in CPATH below
+# In Terminal on macOS copy and paste:
+
+
+export CPATH=/usr/local/Cellar/gcc/9.1.0/lib/gcc/9/gcc/x86_64-apple-darwin18/9.1.0/include
+gcc-9 -c -Wall -Werror -fpic myquadmath_dll.c
+gcc-9 -shared -o libmyquadmath.dylib myquadmath_dll.o -lquadmath
+gcc-9 -L. -Wall -o myquadmath_test myquadmath_test.c -lmyquadmath
+export LD_LIBRARY_PATH=$PWD:$LD_LIBRARY_PATH
+./myquadmath_test
+
+
+# Done!
+# Should run "myquadmath_test"
