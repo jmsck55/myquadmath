@@ -1,3 +1,4 @@
+// Copyright (c) 2020 James J. Cook
 
 #ifndef _MYQUADMATH_DLL_
 #define _MYQUADMATH_DLL_

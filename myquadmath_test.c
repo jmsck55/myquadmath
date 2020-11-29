@@ -1,3 +1,4 @@
+// Copyright (c) 2020 James J. Cook
 
 #include <stdlib.h>
 #include <stdio.h>

@@ -1,4 +1,4 @@
-
+-- Copyright (c) 2020 James J. Cook
 -- A wrapper for myquadmath.dll / myquadmath.so
 
 -- Some functions are included for convience to start a software library.

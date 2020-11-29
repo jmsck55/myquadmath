@@ -1,3 +1,4 @@
+REM Copyright (c) 2020 James J. Cook
 call setenv_gcc64.bat
 gcc -c -Wall -Werror -fpic ..\myquadmath_dll.c
 rem gcc -c -Werror ..\myquadmath_dll.c

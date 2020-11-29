@@ -1,4 +1,4 @@
-
+// Copyright (c) 2020 James J. Cook
 How to compile "myquadmath" on Windows.
 
 1. Download "GCC" with "quadmath.h"

@@ -1,3 +1,4 @@
+// Copyright (c) 2020 James J. Cook
 
 #ifndef _MYQUADMATH_H_
 #define _MYQUADMATH_H_
